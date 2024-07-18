@@ -140,12 +140,16 @@ CREATE TABLE IF NOT EXISTS Disputes (
     DisputeID INT NOT NULL AUTO_INCREMENT,
     BookingID INT,
     AdminID INT,
+    GuestID INT,
+    HostID INT,
     DisputeDate DATETIME,
     Description TEXT,
     Status VARCHAR(50),
     PRIMARY KEY (DisputeID),
     FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID),
-    FOREIGN KEY (AdminID) REFERENCES Admins(AdminID)
+    FOREIGN KEY (AdminID) REFERENCES Admins(AdminID),
+    FOREIGN KEY (GuestID) REFERENCES Guests(GuestID),
+    FOREIGN KEY (HostID) REFERENCES Hosts(HostID)
 );
 
 CREATE TABLE IF NOT EXISTS CancellationPolicies (
@@ -177,7 +181,7 @@ CREATE TABLE IF NOT EXISTS Payments (
     PaymentID INT NOT NULL AUTO_INCREMENT,
     BookingID INT,
     PaymentAmount DEC(10,2),
-    PaymentDate DATETIME,
+    PaymentDate DATETIME NULL,
     PaymentMethod VARCHAR(50),
     PaymentStatus VARCHAR(50),
     PRIMARY KEY (PaymentID),
