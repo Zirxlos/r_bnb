@@ -26,7 +26,7 @@ With all this in mind, we can start building an ERD and creating entities as we 
 
 ## Entity Relationship Diagram
 
-![Alt text](./images/ERD%20RBNB.jpeg)
+![Alt text](./images/ERD%20RBNB.jpg)
 
 ## Data Dictionnary
 
