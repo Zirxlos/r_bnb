@@ -85,6 +85,8 @@ With all this in mind, we can start building an ERD and creating entities as we 
 |  Disputes               | DisputeID          | Unique identifier for dispute                                               | INT (PK)      |
 |                         | BookingID          | Unique identifier for booking                                               | INT (FK)      |
 |                         | AdminID            | Identifier of the admin in charge of this dispute                           | INT (FK)      |
+|                         | GuestID            | Unique identifier for guests                                                | INT (FK)      |
+|                         | HostID             | Unique identifier for hosts                                                 | INT (FK)      |
 |                         | DisputeDate        | Date when the dispute has been started                                      | DATETIME      |
 |                         | Description        | Description of the dispute                                                  | TEXT          |
 |                         | Status             | Status of the dispute (started, resolved, cancelled)                        | VARCHAR(50)   |
